@@ -4,5 +4,4 @@ jdk:
 script: mvn clean verify
 deploy:
   provider: heroku
-  api_key:
-    secure: 
+  api_key: 7fbd0229-094e-4137-855c-8647986443c1
