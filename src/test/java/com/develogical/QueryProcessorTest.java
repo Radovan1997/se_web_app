@@ -27,6 +27,6 @@ public class QueryProcessorTest {
 
     @Test
     public void carsWorks() throws Exception {
-        assertThat(queryProcessor.process("cars"), containsString("slow"));
+        assertThat(queryProcessor.process("cars"), containsString("fast"));
     }
 }
