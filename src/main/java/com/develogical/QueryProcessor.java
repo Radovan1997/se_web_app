@@ -18,6 +18,7 @@ public class QueryProcessor {
         }
 
         else if (query.toLowerCase().contains("plus")){
+            System.out.println(query);
             String[] splitted = query.split(" ");
             String s1 = splitted[2];
             String s2 = splitted[4];
@@ -47,13 +48,6 @@ public class QueryProcessor {
             int first = Integer.parseInt(numbers[2]);
             int second = Integer.parseInt(numbers[5]);
             return Integer.toString(first + second);        
-        }
-
-        else if (query.toLowerCase().contains("square and a cube")){
-            String nquery = query.replaceAll(",","");
-            String[] numbers = query.split(" ");
-            return "";
-
         }
 
         return "";
