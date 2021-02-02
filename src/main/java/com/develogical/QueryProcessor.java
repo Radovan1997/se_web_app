@@ -74,6 +74,42 @@ public class QueryProcessor {
             return "Sean Connery";
         }
 
+        if (query.toLowerCase().contains("cube")) {
+			String querync = query.replaceAll(",", "");
+			String[] numbers = querync.split(" ");
+			String result = "";
+			Boolean first = true;
+			for (int i = 12; i < numbers.length; i++) {
+				int number = Integer.parseInt(numbers[i]);
+				
+				double sq = Math.sqrt(number);
+				if (((sq - Math.floor(sq)) == 0)) {
+					
+					for (int j = 0; j <= number; j++) {
+						int cube = j * j * j;
+						
+						if (cube == number){
+							if (first) {
+								result = result.concat(Integer.toString(number));
+								first = false;
+							} else {
+								result = result.concat(", " + Integer.toString(number));
+								
+							}
+								
+							
+						}
+					}
+					
+					
+					
+				}
+				
+			}
+			System.out.println(result);
+			
+		}
+
         return "";
     }
 }
