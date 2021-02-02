@@ -45,9 +45,21 @@ public class QueryProcessor {
 
         else if (query.toLowerCase().contains("multiplied")) {
             String[] numbers = query.split(" ");
-            int first = Integer.parseInt(numbers[2]);
-            int second = Integer.parseInt(numbers[5]);
-            return Integer.toString(first + second);
+            String s1;
+            String s2;
+            for (int i = 0; i<numbers.length; i++){
+                if (numbers[i].equals("multiplied")){
+                    s1 = numbers[i-1];
+                    s2 = numbers[i+1];
+                    break;
+                }
+            }
+
+            int i1 = Integer.parseInt(s1);
+            int i2 = Integer.parseInt(s2);
+            int i3 = i1 + i2;
+
+            return Integer.toString(i3);
         }
 
         else if (query.toLowerCase().contains("banana")){
