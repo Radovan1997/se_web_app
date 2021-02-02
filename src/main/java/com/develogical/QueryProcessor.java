@@ -47,7 +47,11 @@ public class QueryProcessor {
             String[] numbers = query.split(" ");
             int first = Integer.parseInt(numbers[2]);
             int second = Integer.parseInt(numbers[5]);
-            return Integer.toString(first + second);        
+            return Integer.toString(first + second);
+        }
+
+        else if (query.toLowerCase().contains("banana")){
+            return "yellow";
         }
 
         return "";
