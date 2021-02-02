@@ -18,17 +18,22 @@ public class QueryProcessor {
         }
 
         else if (query.toLowerCase().contains("plus")){
-            System.out.println(query);
-            String[] splitted = query.split(" ");
-            String s1 = splitted[2];
-            String s2 = splitted[4];
+            String[] numbers = query.split(" ");
+            String s1 = "1";
+            String s2 = "1";
+            for (int i = 0; i<numbers.length; i++){
+                if (numbers[i].equals("plus")){
+                    s1 = numbers[i-1];
+                    s2 = numbers[i+1];
+                    break;
+                }
+            }
 
             int i1 = Integer.parseInt(s1);
             int i2 = Integer.parseInt(s2);
-            int summer = i1 + i2;
-            String reter = String.valueOf(summer);
-            return reter;
+            int i3 = i1 + i2;
 
+            return Integer.toString(i3);
         }
 
 
