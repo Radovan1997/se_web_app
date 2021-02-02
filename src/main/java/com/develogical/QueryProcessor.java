@@ -32,7 +32,11 @@ public class QueryProcessor {
 
 
         else if (query.toLowerCase().contains("largest")){
-            return "10";
+            String[] splitted = query.split(" ");
+            String s1 = splitted[8];
+            String s2 = splitted[9];
+            return s1;
+
         }
 
         return "";
