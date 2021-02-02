@@ -45,8 +45,8 @@ public class QueryProcessor {
 
         else if (query.toLowerCase().contains("multiplied")) {
             String[] numbers = query.split(" ");
-            String s1;
-            String s2;
+            String s1 = "1";
+            String s2 = "1";
             for (int i = 0; i<numbers.length; i++){
                 if (numbers[i].equals("multiplied")){
                     s1 = numbers[i-1];
