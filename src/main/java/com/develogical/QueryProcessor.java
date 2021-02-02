@@ -70,6 +70,10 @@ public class QueryProcessor {
             return "2016";
         }
 
+        else if (query.toLowerCase().contains("James Bond")){
+            return "Sean Connery";
+        }
+
         return "";
     }
 }
