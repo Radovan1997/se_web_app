@@ -17,6 +17,17 @@ public class QueryProcessor {
             return "CameraTeam";
         }
 
+        else if (query.toLowerCase().contains("plus")){
+            String[] splitted = query.split(" ");
+            String s1 = splitted[2];
+            String s2 = splitted[4];
+
+            int i1 = Integer.toString(s1);
+            int i2 = Integer.toString(s2);
+
+            return (i1 + i2).toString();
+        }
+
 
         return "";
     }
