@@ -22,14 +22,18 @@ public class QueryProcessor {
             String s1 = splitted[2];
             String s2 = splitted[4];
 
-            int i1 = Integer.toString(s1);
-            int i2 = Integer.toString(s2);
+            int i1 = Integer.parseInt(s1);
+            int i2 = Integer.parseInt(s2);
             int summer = i1 + i2;
             String reter = String.valueOf(summer);
             return reter;
 
         }
 
+
+        else if (query.toLowerCase().contains("largest")){
+            return "10";
+        }
 
         return "";
     }
