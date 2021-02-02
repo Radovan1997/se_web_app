@@ -32,6 +32,7 @@ public class QueryProcessor {
 
 
         else if (query.toLowerCase().contains("largest")){
+            String nquery = query.replaceAll(",","");
             String[] numbers = query.split(" ");
 		    int largest = Integer.parseInt(numbers[8]);
 		    for(int i = 8; i <  numbers.length ; i++ ) {
