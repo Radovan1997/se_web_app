@@ -42,6 +42,20 @@ public class QueryProcessor {
 
         }
 
+        else if (query.toLowerCase().contains("multiplied")) {
+            String[] numbers = query.split(" ");
+            int first = Integer.parseInt(numbers[2]);
+            int second = Integer.parseInt(numbers[5]);
+            return Integer.toString(first + second);        
+        }
+
+        else if (query.toLowerCase().contains("square and a cube")){
+            String nquery = query.replaceAll(",","");
+            String[] numbers = query.split(" ");
+            return "";
+
+        }
+
         return "";
     }
 }
