@@ -12,6 +12,12 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("cars")){
             return "fast";
         }
+
+        else if (query.toLowerCase().contains("what is your name")){
+            return "CameraTeam";
+        }
+
+
         return "";
     }
 }
