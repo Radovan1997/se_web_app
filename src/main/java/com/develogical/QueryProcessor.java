@@ -32,10 +32,12 @@ public class QueryProcessor {
 
 
         else if (query.toLowerCase().contains("largest")){
-            String[] splitted = query.split(" ");
-            String s1 = splitted[8];
-            String s2 = splitted[9];
-            return s1;
+            String[] numbers = query.split(" ");
+		    int largest = Integer.parseInt(numbers[8]);
+		    for(int i = 8; i <  numbers.length ; i++ ) {
+			    largest = Math.max(largest,Integer.parseInt(numbers[i]));
+		    }
+		    return Integer.toString(largest);
 
         }
 
