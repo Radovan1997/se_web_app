@@ -24,8 +24,10 @@ public class QueryProcessor {
 
             int i1 = Integer.toString(s1);
             int i2 = Integer.toString(s2);
+            int summer = i1 + i2;
+            String reter = summer.toString();
+            return reter;
 
-            return (i1 + i2).toString();
         }
 
 
